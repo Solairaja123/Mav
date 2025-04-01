@@ -1,0 +1,911 @@
+package day1;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class class5 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		
+		
+		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
+		driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		driver.findElement(By.xpath("//span[text()='Admin']")).click();
+	    class5.screenshot(driver, "Admin");
+	    
+	    WebDriverWait wait2 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='PIM']")).click();
+	    class5.screenshot(driver, "PIM");
+		 
+	    WebDriverWait wait3 = new WebDriverWait(driver,Duration.ofSeconds(10)); 
+		driver.findElement(By.xpath("//span[text()='Leave']")).click();
+		class5.screenshot(driver,"Leave");
+	
+				
+	    WebDriverWait wait4 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Time']")).click();
+	    class5.screenshot(driver,"Time");
+	    
+	    
+	    
+	    WebDriverWait wait5 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Recruitment']")).click();
+	    class5.screenshot(driver,"Recruitment");
+	    
+	   
+	    WebDriverWait wait6 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='My Info']")).click();
+	    class5.screenshot(driver,"My Info");
+	    
+	 
+	    WebDriverWait wait7 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Performance']")).click();
+	    class5.screenshot(driver,"performance");
+	    
+	    
+	    WebDriverWait wait8 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Dashboard']")).click();
+	    class5.screenshot(driver,"Dashboard");
+	    
+	    
+	    WebDriverWait wait9 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Maintenance']")).click();
+	    driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
+	    driver.findElement(By.xpath("//button[normalize-space()='Confirm']")).click();
+	    class5.screenshot(driver,"Confirm");
+	    
+	    WebDriverWait wait10 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Claim']")).click();
+	    class5.screenshot(driver,"Claim");
+	    
+	    WebDriverWait wait11 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Buzz']")).click();
+	    class5.screenshot(driver,"Buzz");
+	    
+	    
+	}
+
+	public static void screenshot(WebDriver driver,String name) throws IOException
+	{
+	       File screenshotAs = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	        File destination = new File("./tess1/"+name+".jpg");
+	        Files.copy(screenshotAs.toPath(), destination.toPath(), StandardCopyOption.REPLACE_EXISTING);
+	        System.out.println("Screenshot saved successfully!");
+	}
+
+}
+
+
+
+package day1;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class class5 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		
+		
+		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
+		driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		driver.findElement(By.xpath("//span[text()='Admin']")).click();
+	    class5.screenshot(driver, "Admin");
+	    
+	    WebDriverWait wait2 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='PIM']")).click();
+	    class5.screenshot(driver, "PIM");
+		 
+	    WebDriverWait wait3 = new WebDriverWait(driver,Duration.ofSeconds(10)); 
+		driver.findElement(By.xpath("//span[text()='Leave']")).click();
+		class5.screenshot(driver,"Leave");
+	
+				
+	    WebDriverWait wait4 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Time']")).click();
+	    class5.screenshot(driver,"Time");
+	    
+	    
+	    
+	    WebDriverWait wait5 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Recruitment']")).click();
+	    class5.screenshot(driver,"Recruitment");
+	    
+	   
+	    WebDriverWait wait6 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='My Info']")).click();
+	    class5.screenshot(driver,"My Info");
+	    
+	 
+	    WebDriverWait wait7 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Performance']")).click();
+	    class5.screenshot(driver,"performance");
+	    
+	    
+	    WebDriverWait wait8 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Dashboard']")).click();
+	    class5.screenshot(driver,"Dashboard");
+	    
+	    
+	    WebDriverWait wait9 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Maintenance']")).click();
+	    driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
+	    driver.findElement(By.xpath("//button[normalize-space()='Confirm']")).click();
+	    class5.screenshot(driver,"Confirm");
+	    
+	    WebDriverWait wait10 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Claim']")).click();
+	    class5.screenshot(driver,"Claim");
+	    
+	    WebDriverWait wait11 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Buzz']")).click();
+	    class5.screenshot(driver,"Buzz");
+	    
+	    
+	}
+
+	public static void screenshot(WebDriver driver,String name) throws IOException
+	{
+	       File screenshotAs = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	        File destination = new File("./tess1/"+name+".jpg");
+	        Files.copy(screenshotAs.toPath(), destination.toPath(), StandardCopyOption.REPLACE_EXISTING);
+	        System.out.println("Screenshot saved successfully!");
+	}
+
+}
+
+
+
+package day1;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.util.Date;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class test6 {
+
+		// TODO Auto-generated method stub
+
+		
+		public static void main(String[] args) throws IOException {
+	        // Set up ChromeDriver path
+	        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+
+	        // Initialize WebDriver
+	        WebDriver driver = new ChromeDriver();
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	        try {
+	            // Open login page
+	            driver.get("https://yourwebsite.com/login");
+
+	            // Step 1: Login
+	            driver.findElement(By.id("username")).sendKeys("yourUsername"); // Enter username
+	            driver.findElement(By.id("password")).sendKeys("yourPassword"); // Enter password
+	            driver.findElement(By.id("loginButton")).click(); // Click login button
+
+	            // Wait for login to complete
+	            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("profileButton"))); // Change ID accordingly
+
+	            // Take Screenshot after login
+	            takeScreenshot(driver, "after_login");
+
+	            // Step 2: Click Profile Button
+	            driver.findElement(By.id("profileButton")).click(); // Click profile button
+
+	            // Wait for profile page to load
+	            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logoutButton"))); // Ensure logout button appears
+
+	            // Take Screenshot after clicking Profile
+	            takeScreenshot(driver, "after_clicking_profile");
+
+	            // Step 3: Click Logout Button
+	            driver.findElement(By.id("logoutButton")).click(); // Click logout button
+
+	            // Wait until redirected to login page
+	            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginButton")));
+
+	            // Take Screenshot after logout
+	            takeScreenshot(driver, "after_logout");
+
+	        } finally {
+	            // Close the browser
+	            driver.quit();
+	        }
+	    }
+
+	    // Method to capture and save screenshots
+	    public static void takeScreenshot(WebDriver driver, String fileName) throws IOException {
+	        // Convert WebDriver object to TakeScreenshot
+	        TakesScreenshot ts = (TakesScreenshot) driver;
+
+	        // Capture screenshot as file
+	        File srcFile = ts.getScreenshotAs(OutputType.FILE);
+
+	        // Generate timestamp for unique filename
+	        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+	        // Define destination path
+	        File destFile = new File("./screenshots/" + fileName + "_" + timestamp + ".png");
+
+	        // Copy screenshot to destination
+	        File Utils.copyFile(srcFile, destFile);
+
+	        System.out.println("Screenshot saved: " + destFile.getAbsolutePath());
+	    }
+
+		private static void copyFile(File srcFile, File destFile) {
+			// TODO Auto-generated method stub
+			
+		}
+	
+	}
+	
+
+
+package day1;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+public class test4 {
+	
+	private static final WebDriver driver = null;
+	
+
+	public static void main(String[] args, Object wait) {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+		
+		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+		
+		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
+		
+		driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[normalize-space()='Admin']")));
+		takeScreenshot(driver, "login_screenshot");
+		
+		WebElement profileButton = driver.findElement(By.xpath("//p[@class='oxd-userdropdown-name']"));
+		profileButton.click();
+		
+		 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Logout']")));
+		 takeScreenshot(driver, "profile_screenshot");
+		 
+		 WebElement logoutButton = driver.findElement(By.xpath("//a[normalize-space()='Logout']"));
+		 logoutButton.click();
+		 
+		  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Logout']")));
+		 
+		 takeScreenshot(driver, "logout_screenshot");
+		 
+		 driver.quit();
+
+	}
+
+	private static void takeScreenshot(WebDriver driver, String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+
+package day1;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+import java.time.Duration;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class test3 {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.youtube.com/");
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        File screenshotAs = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File destination = new File("./screenshot/img1.png");
+
+        try {
+           
+            Files.copy(screenshotAs.toPath(), destination.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            System.out.println("Screenshot saved successfully!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        driver.quit(); // Close the browser
+    }
+}
+
+
+
+package day1;
+
+import java.io.File;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class test2 {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.manage().window().maximize();
+		
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+			
+			driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+			driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123"); 
+			driver.findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']")).click();
+			driver.findElement(By.xpath("//span[text()='PIM']")).click();
+			driver.findElement(By.xpath("//a[text()='Add Employee']")).click();
+			driver.findElement(By.xpath("//input[@placeholder='First Name'] ")).sendKeys("Tyson");
+			driver.findElement(By.xpath("//input[@placeholder='Middle Name']")).sendKeys("noob");
+			driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("s");
+			driver.findElement(By.xpath("//span[@class='oxd-switch-input oxd-switch-input--active --label-right']")).click();
+			driver.findElement(By.xpath("//input[@autocomplete='off']")).sendKeys("tyson@1");
+			driver.findElement(By.xpath("//div[@class='oxd-grid-item oxd-grid-item--gutters user-password-cell']//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@type='password']")).sendKeys("tyson@1");
+			driver.findElement(By.xpath("//div[@class='oxd-grid-item oxd-grid-item--gutters']//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@type='password']")).sendKeys("tyson@1");
+			driver.findElement(By.xpath("//button[@type='submit']")).click();
+	
+			driver.findElement(By.xpath("//a[@class='oxd-main-menu-item']")).click();
+		    driver.findElement(By.xpath("//button[normalize-space()='Add']")).click();
+		    driver.findElement(By.xpath("//div[@class='oxd-select-text--after']")).click();
+		    driver.findElement(By.xpath("//span[contains(text(),'Admin')]")).click(); 
+		    
+		    WebElement username = driver.findElement(By.xpath("//input[@placeholder='Type for hints...']"));
+		    username.sendKeys("tyson noob s");
+
+		    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		    driver.findElement(By.xpath("//span[normalize-space()='tyson noob s']")).click();
+		    
+		    
+		    driver.findElement(By.xpath("(//div[@class='oxd-select-text--after' ])[2]")).click();
+		    driver.findElement(By.xpath("//span[normalize-space()='Disabled']")).click();
+		    driver.findElement(By.xpath("(//input[@autocomplete='off' and @class='oxd-input oxd-input--active'])[1]")).sendKeys("tyson@4545");
+		    driver.findElement(By.xpath("//div[@class='oxd-grid-item oxd-grid-item--gutters user-password-cell']//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@type='password']")).sendKeys("tyson12321");
+		    driver.findElement(By.xpath("//div[@class='oxd-grid-item oxd-grid-item--gutters']//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@type='password']")).sendKeys("tyson12321");
+		    driver.findElement(By.xpath("//button[@type='submit']")).click();
+		    
+		
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package day1;
+
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.v131.page.model.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class test12 {
+
+		
+		private static final WebDriver driver = null;
+
+		public static void main(String[] args) throws IOException {
+	        
+	        
+	        WebDriver driver = new ChromeDriver();
+	        
+	         
+	            driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");  // Replace with the correct URL
+
+	         
+	            driver.manage().window().maximize();
+	            
+	        	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+	      
+	            
+	            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	            WebElement username = driver.findElement(By.xpath("//input[@placeholder='Username']"));  // Replace with actual locator for username field
+	            WebElement password = driver.findElement(By.xpath("//input[@placeholder='Password']"));  // Replace with actual locator for password field
+	            WebElement loginButton = driver.findElement(By.xpath("//button[normalize-space()='Login']"));  // Replace with actual locator for login button
+
+	            username.sendKeys("Admin"); 
+	            password.sendKeys("admin123");
+	            loginButton.click();
+
+	            
+	            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Admin']")));  // Replace with actual locator for an element that confirms successful login
+
+	            
+	            takeScreenshot(driver, "login_screenshot");
+
+	            
+	            WebElement profileButton = driver.findElement(By.xpath("//p[@class='oxd-userdropdown-name']"));  // Replace with actual locator for Profile button
+	            profileButton.click();
+
+	          
+	            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Logout']")));  // Replace with actual locator for profile page
+
+	           
+	            takeScreenshot(driver, "profile_screenshot");
+
+	           
+	            WebElement logoutButton = driver.findElement(By.xpath("//a[normalize-space()='Logout']"));  // Replace with actual locator for Logout button
+	            logoutButton.click();
+
+	          
+	            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Logout']")));  // Replace with actual locator for the login page
+
+	         
+	            takeScreenshot(driver, "logout_screenshot");
+
+	      
+	           
+	            driver.quit();
+	        }
+
+
+	    
+	    public static void takeScreenshot(WebDriver driver, String screenshotName) throws IOException {
+	      
+	        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+	        
+	        File targetFile = new File("C:\\Users\\Admin\\eclipse-workspace\\class1\\screenshot\\" + screenshotName + ".png");
+
+	        
+	        targetFile.getParentFile().mkdirs();
+
+	      
+	       
+	    
+		
+		
+	}
+
+}
+
+package day1;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class loginpage2{
+	WebDriver driver;
+	
+	
+	void setup()
+	{
+		driver=new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.manage().window().maximize();
+	}
+
+	void testLogin()
+	{
+		loginPage no= new loginPage(driver);
+		no.setUserName("Admin");
+		no.setPassword("admin123");
+		no.clickLogin();
+	}
+	
+	void teardown()
+	{
+		driver.quit();
+	}
+}
+
+
+
+package day1;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class firsttestcase {
+
+	public static void main(String[] args) {
+		
+	          
+			
+			WebDriver driver = new ChromeDriver();
+			driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+			driver.manage().window().maximize();
+			
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+				driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+				driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
+				driver.findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']")).click();
+				driver.findElement(By.xpath("//i[@class='oxd-icon bi-caret-down-fill oxd-userdropdown-icon']")).click();
+				driver.findElement(By.xpath("//a[text()='Logout']")).click();
+				implicitlyWait(10, TimeUnit.SECONDS);
+				 
+				
+				  TakesScreenshot(driver, "screenshot_after_login.png");
+
+				
+				   WebElement profileButton = driver.findElement(By.id("profileButton"));
+		            profileButton.click();
+
+				
+		            TakesScreenshot(driver, "screenshot_after_profile_click.png");
+		            
+		            WebElement logoutButton = driver.findElement(By.id("logoutButton"));
+		            logoutButton.click();
+
+			
+				
+	}
+
+	private static void TakesScreenshot(WebDriver driver, String string) {
+		
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+
+
+package day1;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class class5 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		
+		
+		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
+		driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		driver.findElement(By.xpath("//span[text()='Admin']")).click();
+	    class5.screenshot(driver, "Admin");
+	    
+	    WebDriverWait wait2 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='PIM']")).click();
+	    class5.screenshot(driver, "PIM");
+		 
+	    WebDriverWait wait3 = new WebDriverWait(driver,Duration.ofSeconds(10)); 
+		driver.findElement(By.xpath("//span[text()='Leave']")).click();
+		class5.screenshot(driver,"Leave");
+	
+				
+	    WebDriverWait wait4 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Time']")).click();
+	    class5.screenshot(driver,"Time");
+	    
+	    
+	    
+	    WebDriverWait wait5 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Recruitment']")).click();
+	    class5.screenshot(driver,"Recruitment");
+	    
+	   
+	    WebDriverWait wait6 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='My Info']")).click();
+	    class5.screenshot(driver,"My Info");
+	    
+	 
+	    WebDriverWait wait7 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Performance']")).click();
+	    class5.screenshot(driver,"performance");
+	    
+	    
+	    WebDriverWait wait8 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Dashboard']")).click();
+	    class5.screenshot(driver,"Dashboard");
+	    
+	    
+	    WebDriverWait wait9 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Maintenance']")).click();
+	    driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
+	    driver.findElement(By.xpath("//button[normalize-space()='Confirm']")).click();
+	    class5.screenshot(driver,"Confirm");
+	    
+	    WebDriverWait wait10 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Claim']")).click();
+	    class5.screenshot(driver,"Claim");
+	    
+	    WebDriverWait wait11 = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    driver.findElement(By.xpath("//span[text()='Buzz']")).click();
+	    class5.screenshot(driver,"Buzz");
+	    
+	    
+	}
+
+	public static void screenshot(WebDriver driver,String name) throws IOException
+	{
+	       File screenshotAs = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	        File destination = new File("./tess1/"+name+".jpg");
+	        Files.copy(screenshotAs.toPath(), destination.toPath(), StandardCopyOption.REPLACE_EXISTING);
+	        System.out.println("Screenshot saved successfully!");
+	}
+
+}
+   pag object project
+package test2;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class loginPage{
+		
+		WebDriver driver;
+		
+		loginPage(WebDriver driver)
+		{
+			this.driver=driver;
+			
+		}
+
+		
+		        By user_name =By.xpath("//input[@placeholder='Username']");
+	            By pass_word=By.xpath("//input[@placeholder='Password']");
+	            By login_butn =By.xpath("//button[normalize-space()='Login']");
+	            
+	            
+	            public void setUserName(String user)
+	            {
+	            	driver.findElement(user_name).sendKeys(user);
+	            }
+	            public void setPassword(String  pwd)
+	            {
+	            	driver.findElement(pass_word).sendKeys(pwd);
+	            }
+	            
+	            public void clickLogin()
+	            {
+	            	driver.findElement(login_butn).click();
+	            }
+	            
+	}
+
+}
+
+
+
+
+
+package test2;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import day1.loginPage;
+
+public class loginpage2 {
+		WebDriver driver;
+		
+		
+		void setup()
+		{
+			driver=new ChromeDriver();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+			driver.manage().window().maximize();
+		}
+
+		void testLogin()
+		{
+			loginPage ln=new loginPage(driver);
+			ln.setUserName("Admin");
+			ln.setPassword("admin123");
+			ln.clickLogin();
+		}
+		
+		void teardown()
+		{
+			driver.quit();
+		}
+	}
+
+
+
+}
+
+ublic void user_is_on_login_page() {
+		driver=new ChromeDriver();
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+	}
+
+	
+	@Given("user enter the username as {string}")
+	public void userEnterTheUsernameAs(String username) {
+		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys(username);
+	}
+	    
+	@Given("user enter the password as {string}")
+	public void userEnterThePasswordAs(String password) {
+		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(password);
+	    
+	}
+	@When("user click  the login button")
+	public void userClickTheLoginButton() {
+		 driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();		
+		
+	}
+	    
+	@When("user is click on the admin page")
+	public void user_is_click_on_the_admin_page() {
+		driver.findElement(By.xpath("//span[text()='Admin']")).click();
+	    
+	}
+
+	@When("user is click on the user management")
+	public void user_is_click_on_the_user_management() {
+		driver.findElement(By.xpath("//span[normalize-space()='User Management']")).click();
+		driver.findElement(By.xpath("//ul[@role='menu']")).click();
+		driver.findElement(By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@class='oxd-input oxd-input--active']")).sendKeys("tyson1221");
+		driver.findElement(By.xpath("//div[@class='oxd-select-text--after'] //div//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow']")).click();
+		driver.findElement(By.xpath("//span[contains(text(),'Admin')]")).click();
+		 WebElement username = driver.findElement(By.xpath("//input[@placeholder='Type for hints...']"));
+		    username.sendKeys("tyson noob r");
+		    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		    driver.findElement(By.xpath("//div[@role='option']")).click();
+	driver.findElement(By.xpath("//span[normalize-space()='Enabled']")).click();
+	driver.findElement(By.xpath("//button[normalize-space()='Search']")).click();
+		
+	
+	}
+
+	@When("user is enter the user details")
+	public void user_is_enter_the_user_details() {
+		driver.findElement(By.xpath("//span[normalize-space()='User Management']")).click();
+		driver.findElement(By.xpath("//ul[@role='menu']")).click();
+		driver.findElement(By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@class='oxd-input oxd-input--active']")).sendKeys("tyson1221");
+		driver.findElement(By.xpath("//div[@class='oxd-select-text--after'] //div//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow']")).click();
+		driver.findElement(By.xpath("//span[contains(text(),'Admin')]")).click();
+		 WebElement username = driver.findElement(By.xpath("//input[@placeholder='Type for hints...']"));
+		    username.sendKeys("tyson noob r");
+		    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		    driver.findElement(By.xpath("//div[@role='option']")).click();
+	driver.findElement(By.xpath("//span[normalize-space()='Enabled']")).click();
+	driver.findElement(By.xpath("//button[normalize-space()='Reset']")).click();
+	    
+	//}
+	//@When("user click on add button")
+	//public void user_click_on_add_button() {
+	    
+//	}
+
+	//@When("user is edite the user management")
+	//public void user_is_edite_the_user_management() {
+	   
+	}
+
+	

@@ -1,0 +1,148 @@
+1. Show the average health metrics for all workers
+2. Identify the worker with the most safety violations
+3. Show the average number of safety violations per worker
+4.List idle workers who have been idle for more than two weeks("long respon")
+5. List workers who have had multiple safety incidents
+6. Show the number of safety incidents per department
+7. Provide the name and designation of the person with ID WID3("one infon'repeated'")
+8. What is the location of the worker named Karen Chilton("one infon 'repeated'")
+9. Find all employees whose designation is worker
+10. How many unique designations are present in the dataset
+11. Count of the number of employees located in Room3
+12. What is the total number of employees in team2
+13. How many employees are designated as Crane Operator
+14. employees who are either Forklift Operator or Electrician and are located in Room3
+15. List the names of all employees along with their team names
+16. What is the scheduled maintenance date for Forklift 2
+17. List all equipment located in Room5
+18. Find all equipment that has Crane in its name
+19. How many unique equipment types are present in the dataset
+20. Count the number of equipment scheduled for maintenance on 2024-08-15
+21. Which pieces of equipment are located in Room3
+22. List the names of all equipment along with their scheduled maintenance dates
+23. Provide the designation and location title for the worker with ID WID1
+24. How many total entries exist for the worker with ID WID4?
+25. Count the number of unique designations present in the worker history data
+26. Find all entries for workers who were located in Room2
+27. How many times did the worker with ID WID8 work in Room4
+28. Count the total number of entries for all workers who have the designation Field Manager
+29. List the worker IDs and designations of all workers who worked in Room3 during May 2024
+30. Provide all trips that occurred on 2024-05-23
+31. List all trips in descending order based on the end time
+32. How many trips were made using EQID2
+33. Find all trips that took place between 9:00:00 and 10:00:00 on 2024-05-21("" inter sever error)
+34. Find all entries for workers who are either Electrician or Crane Operator and list their locations
+35. How many total location entries exist for the worker with ID WID4
+36. How many times did the worker with ID WID2 log their location
+37. Count the total number of entries for all workers on 2024-05-23
+38. Find all entries for workers who logged their location at Room1 on 2024-05-23
+39. Provide the body temperature and heart rate for the worker with ID WID3 on 2024-05-15
+40. What was the fatigue level of the worker with ID WID10 on 2024-06-15?
+41. List all health entries for the worker with ID WID1
+42. Find all records where the oxygen level is below 95
+43. What is the average body temperature of workers on 2024-05-30
+44. Count the number of workers who reported a fatigue level above 35 on 2024-06-15
+45. What time did the worker with ID WID6 log their health data on 2024-05-30
+46. Provide all health entries for 2024-05-15
+47. Which workers had a body temperature above 37.0°C on 2024-06-15
+48. Find all entries for workers who had a heart rate of 100 beats per minute or higher
+49. How many times did the worker with ID WID2 log their health data?
+50. Count the total number of entries for all workers who had an oxygen level of 100
+51. Find all entries for workers who reported a fatigue level of 30 or less on 2024-06-15
+52. List the worker IDs and their corresponding body temperatures for all workers who were present on 2024-05-30
+53. Provide the status and time for the worker with ID WID3 on 2024-05-17
+54. What was the status of the worker with ID WID10 on 2024-05-21
+55. List all status entries for the worker with ID WID1
+56. How many workers were marked as working on 2024-05-23
+57. Count the number of times each worker has been marked as idle
+58. What time did the worker with ID WID6 log their status on 2024-05-19
+59. Provide all status entries for 2024-05-20
+60. Which workers were marked as idle on 2024-05-21
+61. Find all entries for workers who were working on 2024-05-18
+62. Sort the status entries by date in ascending order
+63. How many times did the worker with ID WID2 log their status
+64. Count the total number of entries for all workers who were on leave
+65. Find all entries for workers who reported as working on 2024-05-17
+66. What is the shift type for the worker with ID WID10?
+67. List all schedule entries for the worker with ID WID1
+68. How many workers have a shift type of day
+69. Count the number of workers scheduled to work between 18:00:00 and 22:00:00
+70. Count the number of workers scheduled to work between 18:00:00 and 22:00:00
+71. Find all entries for workers who have a break starting at 13:00:00
+72. Sort the schedule entries by worker ID in ascending order
+73. List all entries in descending order based on the end time
+74. How many times did the worker with ID WID2 have a schedule entry
+75. Count the total number of entries for all workers scheduled for the night shift
+76. List the worker IDs and their corresponding shift types for all workers scheduled for day shifts
+77. Provide the task name and timestamp for the task with ID TID5
+78. What equipment ID was used for the task Material Loading performed by worker WID1
+79. List all tasks assigned to the worker with ID WID3
+80. Find all tasks that involve equipment ID EQID3
+81. How many tasks were performed on 2023-05-16?
+82. Count the number of tasks assigned to each worker
+83. Count the number of tasks assigned to each worker
+84. What time did the worker with ID WID1 start the task Material Loading on 2023-05-16?
+85. Provide all tasks that were performed between 09:00:00 and 10:00:00 on 2023-05-16
+86. Sort the task entries by date and time in ascending order
+87. List all tasks in descending order based on the timestamp
+88. How many tasks did the worker with ID WID14 perform on 2023-05-16
+89. Count the total number of tasks for each unique task name
+90. List the task IDs and their corresponding worker IDs for all tasks that were performed after 09:30:00 on 2023-05-16
+91. How many tasks did the worker with ID TID13 have assigned on 2024-05-18
+92. Provide the name and location of the equipment with ID EQID3
+93. List all equipment entries that are located in Room5
+94. Count the number of different types of equipment listed in the data
+95. list all event type for event id EID1
+96. how many cameras are there in total
+97. how many devices are located in room1
+98. list the device ids of all devices in room2
+99. what is the most common device type in table
+100. what devices are located in room4
+101. which device id corresponds to camera in room2
+102. list the device ids for device type camera
+103. what is the ratio of cameras to sensors in the room1
+104. severity level of missing helmet
+105. severity level of event type safety infraction 
+106. how many devices are there total
+107. what is the event id of missing helmet safety infraction
+108. what is event id of missing helmet
+109. what is the severity level of close to running machinery proximity infraction
+110. how many safety infractions are there in total
+111. what is the most common event type in the table
+112. what is total number of events that have severity level L3 or lower(p)
+113. which event types have highest frequency of occurrence(p)
+114. how many safety infractions occured in room4(p)
+115. what is the event id of most recent safety infraction
+116. how many events occured in room3
+117. what are top 3 most common safety infractions in the entire facility
+118. which areas of facility have highest frequency of safety infractions
+119. how many environmental infractions are there in total
+120. what is the most common event subtype in table
+121. how many events are related to missing safety shoes
+122. how many events have severity level l2
+123. what is average severity level for all safety infractions
+124. what is the device id of camera located in the room2
+125. what devices are located in room1
+126. list the device id of all devices in the room2
+127. how many devices are located in the room3
+128. how many events occured on August 28,2024 between 12:00 and 13:00
+129. what are unique device type in the facility
+130. what is the most common event type in room1
+131. are there any safety infractions occured in room2
+132. device ids asscociated with camera in room4
+133. device id correspond to camera in room2
+134. how many events occured in the room1 on August 27,2024
+135. which device id is associated with camera device type in room2
+136. total number of events that occured in room1 on August 26,2024
+137. how many collision detection events are there in total
+138. any safety infraction occured in room2
+139. device id of camera in room3
+140. total number of events that occured in room4 on August 26, 2024
+141. how many human infractions are there in total
+142. what is average severity level of all events that occured in room1
+143. Provide the location and time for the worker with ID WID3 on 2024-05-16
+144. What is the location of the worker with ID WID10 on 2024-05-20
+145. List all location entries for the worker with ID WID1
+146. What time did the worker with ID WID6 log their location on 2024-05-23
+147 what is the ratio of environmental infractions to safety infractions in power substation
+
